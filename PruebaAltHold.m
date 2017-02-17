@@ -1,12 +1,15 @@
-% Archivo para obtner las variables necesarias del archivo.log que contiene
+% Archivo para obtener las variables necesarias del archivo.log que contiene
 % todos los datos de vuelo.
 
+% Se corren dos tipos de archivos
 %load DatosAnalisisLoiter;
+% El archivo uno contiene datos del roll con un intervalo de tiempo menor
 run 'Altholdroll1'
 
 x1 = ATT.data(427:512,4);
 t1 = ATT.data(427:512,1);
 
+% El archivo dos contiene tambien datos de vuelo pero con mayor ruido
 run 'Altholdroll'
 
 x2 = ATT.data(483:572,4);
@@ -15,7 +18,7 @@ t2 = ATT.data(483:572,1);
 
 
 %% Variables necesarias.
-% Se guardan las variables que ser·n necesarias para la comparaciÛn del
+% Se guardan las variables que ser√°n necesarias para la comparaci√≥n del
 % modo Loiter con nuestro modelo.
 
 % Tiempo modificado.
